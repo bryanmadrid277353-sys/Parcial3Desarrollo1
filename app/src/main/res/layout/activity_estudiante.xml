@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvTituloEstudiante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_estudiante"
+            android:textColor="@color/primary_navy"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Foto del Estudiante (Placeholder vectorial para reemplazar) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvFotoEstudiante"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="80dp"
+            app:cardElevation="6dp"
+            app:strokeColor="@color/accent_orange"
+            app:strokeWidth="3dp">
+
+            <ImageView
+                android:id="@+id/ivFotoEstudiante"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/label_estudiante_nombre"
+                android:scaleType="centerCrop"
+                android:src="@drawable/foto_estudiante" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Tarjeta con los Datos Personales del Estudiante -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvDatosEstudiante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvNombreEstudiante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_estudiante_nombre"
+                    android:textColor="@color/primary_navy"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/border_light" />
+
+                <TextView
+                    android:id="@+id/tvCarnetEstudiante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_estudiante_carnet"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvCarreraEstudiante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/label_estudiante_carrera"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvAsignaturaEstudiante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/label_estudiante_asignatura"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvSeccionEstudiante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/label_estudiante_seccion"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvCicloEstudiante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/label_estudiante_ciclo"
+                    android:textColor="@color/accent_orange"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Botón Regresar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegresar"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/btn_regresar"
+            android:textColor="@color/primary_navy"
+            app:cornerRadius="10dp"
+            app:icon="@android:drawable/ic_menu_revert"
+            app:strokeColor="@color/primary_navy" />
+
+    </LinearLayout>
+</ScrollView>

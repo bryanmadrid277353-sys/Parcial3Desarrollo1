@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Encabezado de Sesión de Usuario -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvHeaderUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="@color/primary_navy"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/ivUserAvatar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/foto_estudiante"
+                    app:tint="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvBienvenidaTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¡Bienvenido al Sistema!"
+                        android:textColor="@color/accent_orange_light"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvBienvenida"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Título de Sección CRUD -->
+        <TextView
+            android:id="@+id/tvSeccionGestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Gestión de Inventario (CRUD)"
+            android:textColor="@color/primary_navy"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Botones Operaciones CRUD -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnInsertar"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/primary_navy"
+            android:text="@string/btn_menu_insertar"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            app:icon="@android:drawable/ic_input_add" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnListar"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/primary_navy"
+            android:text="@string/btn_menu_listar"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            app:icon="@android:drawable/ic_menu_sort_by_size" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnActualizar"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/primary_navy"
+            android:text="@string/btn_menu_actualizar"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            app:icon="@android:drawable/ic_menu_edit" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEliminar"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/primary_navy"
+            android:text="@string/btn_menu_eliminar"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            app:icon="@android:drawable/ic_menu_delete" />
+
+        <!-- Título de Sección Información -->
+        <TextView
+            android:id="@+id/tvSeccionInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Información del Proyecto"
+            android:textColor="@color/primary_navy"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Botones Informativos -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEquipo"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/btn_menu_equipo"
+            android:textColor="@color/primary_navy"
+            app:cornerRadius="10dp"
+            app:icon="@android:drawable/ic_menu_myplaces"
+            app:strokeColor="@color/primary_navy" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEstudiante"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/btn_menu_estudiante"
+            android:textColor="@color/primary_navy"
+            app:cornerRadius="10dp"
+            app:icon="@android:drawable/ic_menu_info_details"
+            app:strokeColor="@color/primary_navy" />
+
+        <!-- Botón Cerrar Sesión -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCerrarSesion"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:backgroundTint="@color/status_error"
+            android:text="@string/btn_menu_cerrar_sesion"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            app:icon="@android:drawable/ic_lock_power_off" />
+
+    </LinearLayout>
+</ScrollView>

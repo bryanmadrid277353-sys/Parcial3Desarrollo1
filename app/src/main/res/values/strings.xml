@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nombre de la App -->
+    <string name="app_name">Gestión de Zapatos Deportivos</string>
+
+    <!-- Pantalla Login -->
+    <string name="titulo_login">INICIO DE SESIÓN</string>
+    <string name="subtitulo_login">Sistema de Control de Inventario</string>
+    <string name="hint_usuario">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="btn_iniciar_sesion">Iniciar Sesión</string>
+    <string name="msg_error_login">Usuario o contraseña incorrectos. Verifique sus credenciales.</string>
+    <string name="msg_campo_requerido">Este campo es obligatorio</string>
+
+    <!-- Pantalla Menú Principal -->
+    <string name="titulo_menu">Menú Principal</string>
+    <string name="label_usuario_sesion">Usuario en sesión: %1$s</string>
+    <string name="btn_menu_insertar">Insertar Zapato</string>
+    <string name="btn_menu_listar">Listar / Mostrar Inventario</string>
+    <string name="btn_menu_actualizar">Actualizar Zapato</string>
+    <string name="btn_menu_eliminar">Eliminar Zapato</string>
+    <string name="btn_menu_equipo">Datos del equipo de trabajo</string>
+    <string name="btn_menu_estudiante">Mis datos de estudiante</string>
+    <string name="btn_menu_cerrar_sesion">Cerrar Sesión</string>
+    <string name="dialog_cerrar_sesion_titulo">Cerrar Sesión</string>
+    <string name="dialog_cerrar_sesion_msg">¿Está seguro que desea salir del sistema y cerrar su sesión?</string>
+    <string name="btn_confirmar">Sí, Salir</string>
+    <string name="btn_cancelar">Cancelar</string>
+
+    <!-- Pantalla Datos del Equipo -->
+    <string name="titulo_equipo">Equipo de Trabajo</string>
+    <string name="subtitulo_equipo">Integrantes de la Asignatura ETPS1</string>
+    <string name="nombre_integrante_1">Bryan Antonio Madrid Cortez</string>
+    <string name="carnet_integrante_1">Carnet: 25-4937-2022</string>
+    <string name="rol_integrante_1">Rol: Desarrollador Principal</string>
+
+    <string name="nombre_integrante_2">Carlos Eduardo Gómez Rivas</string>
+    <string name="carnet_integrante_2">Carnet: 25-1122-2022</string>
+    <string name="rol_integrante_2">Rol: Analista de Sistemas</string>
+
+    <string name="nombre_integrante_3">María José Hernández López</string>
+    <string name="carnet_integrante_3">Carnet: 25-3344-2022</string>
+    <string name="rol_integrante_3">Rol: Diseñadora de Interfaz</string>
+
+    <!-- Pantalla Datos del Estudiante -->
+    <string name="titulo_estudiante">Perfil del Estudiante</string>
+    <string name="label_estudiante_nombre">Nombre: Bryan Antonio Madrid Cortez</string>
+    <string name="label_estudiante_carnet">Carnet: 25-4937-2022</string>
+    <string name="label_estudiante_carrera">Carrera: Ingeniería en Sistemas</string>
+    <string name="label_estudiante_asignatura">Asignatura: ETPS1</string>
+    <string name="label_estudiante_seccion">Sección: 01</string>
+    <string name="label_estudiante_ciclo">Ciclo: 02-2026</string>
+
+    <!-- CRUD Formulario Labels & Hints -->
+    <string name="hint_codigo">Código del zapato (ej. ZAP-001)</string>
+    <string name="hint_marca">Marca (ej. Nike, Adidas)</string>
+    <string name="hint_modelo">Modelo (ej. Air Zoom, Ultraboost)</string>
+    <string name="hint_talla">Talla (ej. 41.5)</string>
+    <string name="hint_precio">Precio ($) (ej. 120.00)</string>
+    <string name="hint_cantidad">Cantidad (unidades)</string>
+    <string name="hint_descuento">Descuento (%) (0 - 100)</string>
+
+    <!-- Form Buttons -->
+    <string name="btn_guardar">Guardar Zapato</string>
+    <string name="btn_buscar">Buscar Zapato</string>
+    <string name="btn_actualizar_guardar">Guardar Cambios</string>
+    <string name="btn_eliminar_confirmar">Eliminar de Inventario</string>
+    <string name="btn_regresar">Volver al Menú</string>
+    <string name="btn_limpiar">Limpiar Campos</string>
+
+    <!-- Screen Titles -->
+    <string name="titulo_insertar">Registrar Nuevo Zapato</string>
+    <string name="titulo_listar">Inventario de Zapatos</string>
+    <string name="titulo_actualizar">Actualizar Registros</string>
+    <string name="titulo_eliminar">Eliminar Registros</string>
+
+    <!-- Summary & Calculation Labels -->
+    <string name="label_total_pares">Total de pares en inventario: %1$d pares</string>
+    <string name="label_valor_inventario">Valor total del inventario: $ %1$.2f</string>
+    <string name="label_subtotal">Subtotal: $ %1$.2f</string>
+    <string name="label_descuento_monto">Descuento (%1$.1f%%): -$ %2$.2f</string>
+    <string name="label_iva">IVA (13%%): $ %1$.2f</string>
+    <string name="label_total">Total a Pagar: $ %1$.2f</string>
+
+    <!-- Success & Error Messages -->
+    <string name="msg_exito_insertar">¡Zapato registrado correctamente!</string>
+    <string name="msg_exito_actualizar">¡Registro actualizado correctamente!</string>
+    <string name="msg_exito_eliminar">¡Zapato eliminado correctamente del inventario!</string>
+    <string name="msg_codigo_existe">El código especificado ya existe en el inventario.</string>
+    <string name="msg_codigo_no_encontrado">No se encontró ningún zapato con el código ingresado.</string>
+
+    <!-- Validation Errors -->
+    <string name="error_precio_invalido">El precio debe ser un número mayor a 0.</string>
+    <string name="error_cantidad_invalida">La cantidad debe ser un número entero mayor o igual a 0.</string>
+    <string name="error_talla_invalida">La talla debe estar en el rango de 20 a 50.</string>
+    <string name="error_descuento_invalido">El porcentaje de descuento debe estar entre 0 y 100.</string>
+
+    <!-- Dialog Delete -->
+    <string name="dialog_eliminar_titulo">Confirmar Eliminación</string>
+    <string name="dialog_eliminar_msg">¿Está seguro que desea eliminar permanentemente el zapato con código %1$s (%2$s %3$s) del inventario?</string>
+
+    <string name="msg_lista_vacia">No hay zapatos registrados en el inventario.</string>
+</resources>

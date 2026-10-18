@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <!-- Fondo Círculo de la Foto -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M100,0 C155.23,0 200,44.77 200,100 C200,155.23 155.23,200 100,200 C44.77,200 0,155.23 0,100 C0,44.77 44.77,0 100,0 Z" />
+    <!-- Cabeza -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M100,50 C116.57,50 130,63.43 130,80 C130,96.57 116.57,110 100,110 C83.43,110 70,96.57 70,80 C70,63.43 83.43,50 100,50 Z" />
+    <!-- Hombros/Busto -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M100,120 C135,120 160,140 165,170 C165,170 140,185 100,185 C60,185 35,170 35,170 C40,140 65,120 100,120 Z" />
+</vector>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvTituloActualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_actualizar"
+            android:textColor="@color/primary_navy"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Sección de Búsqueda por Código -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvBusqueda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCodigoBuscar"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ingrese el código del zapato a buscar">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCodigoBuscar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBuscar"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/primary_navy"
+                    android:text="@string/btn_buscar"
+                    android:textColor="@color/white"
+                    app:cornerRadius="10dp"
+                    app:icon="@android:drawable/ic_menu_search" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Formulario de Modificación (se habilita tras la búsqueda) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvFormularioActualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvSubtituloFormActualizar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Datos Modificables"
+                    android:textColor="@color/primary_navy"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Marca -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilMarca"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_marca">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMarca"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="textCapWords" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Modelo -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilModelo"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/hint_modelo">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etModelo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="textCapWords" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Talla -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTalla"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/hint_talla">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTalla"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Precio -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPrecio"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/hint_precio">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPrecio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Cantidad -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCantidad"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/hint_cantidad">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCantidad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Descuento -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDescuento"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/hint_descuento">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDescuento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Vista Previa de Cálculos Actualizados -->
+                <LinearLayout
+                    android:id="@+id/llVistaPreviaCalculos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="#F1F5F9"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvSubtotalPreview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvDescuentoPreview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/accent_orange"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvIVAPreview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvTotalPreview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/status_success"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Botón Guardar Cambios -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnActualizarGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:backgroundTint="@color/primary_navy"
+            android:enabled="false"
+            android:text="@string/btn_actualizar_guardar"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp" />
+
+        <!-- Botón Regresar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegresar"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/btn_regresar"
+            android:textColor="@color/primary_navy"
+            app:cornerRadius="10dp"
+            app:strokeColor="@color/primary_navy" />
+
+    </LinearLayout>
+</ScrollView>
